@@ -43,7 +43,6 @@ export default function Tables(props) {
         navigate("createCampaign")
     }
     useEffect(() => {
-        debugger
         setRows(props?.rows)
         setCount(props?.rows?.length)
         setPage(0)
@@ -55,7 +54,6 @@ export default function Tables(props) {
 
     const deleteRow = async (e, id) => {
         e.preventDefault()
-        debugger
         const localData = JSON.parse(localStorage.getItem('data'))
         const filterData = localData.filter(curr => curr.campaignID !== id)
         setRows(filterData);
@@ -107,7 +105,7 @@ export default function Tables(props) {
 
                                         <TableRow key={id} hover >
                                             {['campaignID', 'name', 'status', 'startDate', 'endDate'].map((curr, index) =>{
-                                                return <TableCell align='center' key={index}>{val[curr]}</TableCell>
+                                                return <TableCell align='center' key={index}>{['startDate', 'endDate'].includes(curr) ? val[curr].substring(0,10) :val[curr]}</TableCell>
                                                }
                                             )
                                             }

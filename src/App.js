@@ -28,16 +28,7 @@ function App() {
   const handleResetChange = () => {
     setRows(allCampaign)
   }
-  useEffect(() =>{
-    const dataVal = JSON.parse(localStorage.getItem('data'))?.length > 0  ? JSON.parse(localStorage.getItem('data')) : []
-    const value = dataVal.map((curr,ind) =>{
-      const {city, imageUrl, videoUrl, audience, productList, channel, ...rest} = curr;
-      return rest;
-    })
-    localStorage.setItem('data',JSON.stringify(dataVal))
-    setAllCampaign(value)
-    setRows(value)
-  },[])
+  
 
   useEffect(() =>{
     const dataVal = JSON.parse(localStorage.getItem('data'))?.length > 0  ? JSON.parse(localStorage.getItem('data')) : []

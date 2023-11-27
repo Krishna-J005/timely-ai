@@ -59,7 +59,7 @@ const prepareData = (item, val, offerVal) => {
 }
 
 const CampaignForm = (props) => {
-    const cityList = ['Delhi', 'Mumbai', 'Chennai', 'Bangalore', 'Hyderabad', 'Noida', 'Gurugram', 'Kolkata'];
+    const cityList = ['New Delhi', 'Mumbai', 'Chennai', 'Bangalore', 'Hyderabad', 'Noida', 'Gurugram', 'Kolkata', 'Bhubaneshwar'];
     const channelList = ['Email', 'Social Media' , 'Website']
     const param = useParams()
     const navigate = useNavigate()
@@ -181,7 +181,7 @@ const CampaignForm = (props) => {
                     }
                     />
                     <Button variant="outlined" color="secondary" onClick={(e) => { addInfo(e, item, itemName, formObj) }}
-                        style={{ margin: '10px', padding: '8px 12px', width: '10%', textTransform: 'none' }}>
+                        style={{ margin: '10px', padding: '8px 12px', width: '200px', textTransform: 'none' }}>
                         Add {item.key === 'productList' ? 'Products' : item.key }
                     </Button>
                 </div>
