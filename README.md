@@ -68,3 +68,38 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Proposed JSON
+{
+    "name": "Campaign Name",
+    "status": "Active",
+    "city": "New Delhi",
+    "imageUrl": "img.com",
+    "videoUrl": "",
+    "startDate": "2023-11-14T18:30:00.000Z",
+    "endDate": "2023-11-15T18:30:00.000Z",
+    "audience": [
+        {
+            "gender": "Male",
+            "minAge": "12",
+            "maxAge": "18"
+        }
+    ],
+    "channel": [
+        {
+            "src": "Email",
+            "message": "Diwali Sale"
+        }
+    ],
+    "productList": [
+        {
+            "productID": "PRD_1",
+            "productImg": "prd_img",
+            "productUrl": "/prd/product_id",
+            "name": "Prod Name",
+            "discount": "20"
+        }
+    ],
+    "campaignID": "CMP_1"
+}
